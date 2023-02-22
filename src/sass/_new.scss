@@ -162,3 +162,7 @@ a {
   display: flex;
   gap: var(--gap-md);
 }
+
+.swiper-pagination-bullet {
+  background: var(--clr-brown-light);
+}
