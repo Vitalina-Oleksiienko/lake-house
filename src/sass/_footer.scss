@@ -10,6 +10,11 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: var(--gap-xl);
+
+  @media screen and (max-width: 640px){
+    grid-template-areas: "contacts" "newsletter" "legal";
+    grid-template-columns: 1fr;
+  }
 }
 
 .input {
@@ -61,11 +66,4 @@ footer form {
 .feedback-author {
   border-left: 2px solid var(--clr-orange);
   padding-left: 16px;
-}
-
-@media screen and (max-width: 640px) {
-  .footer-content {
-    grid-template-areas: "contacts" "newsletter" "legal";
-    grid-template-columns: 1fr;
-  }
 }

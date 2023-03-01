@@ -41,6 +41,10 @@
 .body-md {
   font-size: 14px;
   line-height: 20px;
+
+  @media screen and (max-width: 800px){
+    text-align: left;
+  }
 }
 
 .caption {

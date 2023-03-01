@@ -73,33 +73,42 @@ a {
   gap: var(--gap-md);
 }
 
-@media screen and (max-width: 960px) {
+ 
   .about-section .about-description {
-    columns: 1;
+    @media screen and (max-width: 960px) {
+      columns: 1;
+    }
+    
   }
-}
 
-@media screen and (max-width: 800px) {
   .about-section {
-    grid-template-areas: "text" "divider" "image";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: var(--gap-md);
+    @media screen and (max-width: 800px){
+      grid-template-areas: "text" "divider" "image";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: var(--gap-md);
+    }
+    
   }
 
   .about-section img {
-    grid-area: image;
-    aspect-ratio: auto;
-    max-width: 100%;
-    object-fit: cover;
+    @media screen and (max-width: 800px) {
+      grid-area: image;
+      aspect-ratio: auto;
+      max-width: 100%;
+      object-fit: cover;
+    }
+    
   }
 
   .about-section .divider {
-    grid-area: divider;
-    align-self: center;
-    justify-self: center;
-  }
+     @media screen and (max-width: 800px) {
+      grid-area: divider;
+      align-self: center;
+      justify-self: center;
+    }
 }
+
 
 .tint {
   background-color: var(--clr-brown-soft);
@@ -111,12 +120,20 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap-lg);
   text-align: center;
+
+  @media screen and (max-width: 800px){
+    grid-template-columns: 1fr;
+  }
 }
 
 .arrangements-list .grid-list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 800px){
+    display: grid;
+    column-gap: 16px;
+  }
 }
 
 .icon {
@@ -130,6 +147,9 @@ a {
   column-gap: var(--gap-xl);
   --col-gap: var(--gap-sm);
   --icon-size: 40px;
+  @media screen and (max-width: 800px){
+    grid-template-columns: 1fr;
+  }
 }
 
 :is(.arrangements-list, .premises-list) p:first-of-type {
@@ -140,6 +160,10 @@ a {
   display: flex;
   flex-direction: row;
   gap: var(--gap-xl);
+
+  @media screen and (max-width: 800px){
+    flex-direction: column;
+  }
 }
 
 .benefits-list {
@@ -148,6 +172,9 @@ a {
   gap: var(--gap-lg);
   --icon-size: 40px;
   --col-gap: var(--gap-sm);
+  @media screen and (max-width: 800px){
+      grid-template-columns: 1fr;
+  }
 }
 
 .feedbacks-section > .section-content {

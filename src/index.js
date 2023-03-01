@@ -28,14 +28,14 @@ new Swiper('.swiper', {
       sliderPerView: 3,
     },
     1024: {
-      sliderPerView: 4,
+      sliderPerView: 3,
 
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
         },
       mousewheel: {
-        sensitivity: 4,
+        sensitivity: 3,
         eventsTarget: ".swiper"
       },
     }
